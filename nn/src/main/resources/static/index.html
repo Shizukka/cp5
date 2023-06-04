@@ -8,18 +8,12 @@
         <h1>Classifying frontoffice</h1>
         <h2>Configure a classifier</h2>
         <form method=post action="./config" enctype="application/x-www-form-urlencoded" name="config">
-           <label for="graph">Graph name ?</label>
-           <select name="graph" id="graph">
-              <option value="efficientnetv2-s" selected="">efficientnetv2-s</option>
-              <option value="efficientnetv2-m">efficientnetv2-m</option>
-           </select>
-           <input type="submit" value="Config">
+           <input type="submit" value="Load the model !">
         </form>
-        <h2>Classify a picture</h2>
+        <h2>Classify a ECG</h2>
         <form method=post action="./classify" enctype="multipart/form-data" name="classify">
            <input type="file" name="picture" onchange="loadFile(event)">
            <input type="submit" value="Classify">
-           <img id="preview" src="" alt="">
         </form>
         <script>
            var loadFile = function(event) {
